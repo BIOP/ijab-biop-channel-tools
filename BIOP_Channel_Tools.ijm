@@ -12,7 +12,7 @@ runFrom = "jar:file:BIOP/"+bar_jar+"!/"+bar_file;
 //////////////////////////////////////////////////////////////////////////////////////////////
 // The line below is for debugging. Place this VSI file in the ActionBar folder within Plugins
 //////////////////////////////////////////////////////////////////////////////////////////////
-runFrom = "/plugins/ActionBar/"+bar_file;
+//runFrom = "/plugins/ActionBar/Debug/"+bar_file;
 
 if(isOpen(bar_name)) {
 	run("Close AB", bar_name);
@@ -473,7 +473,7 @@ function dealWithRois() {
 	for(i=0; i<roiOrder.length; i++) {
 		selectImage(name);
 		if(roiOrder[i] != "") {
-			roiManager("Select", roiIdx);
+			roiManager("Select", roiOrder[i]);
 			Roi.setStrokeWidth(roiWidth);
 			Roi.setStrokeColor(roiColors[i]);
 			setSlice(i+1);
@@ -759,5 +759,15 @@ for (i=0; i<lengthOf(file); i++) {
 	}
 	setBatchMode(false);
 }
+</macro>
+</line>
+<text><html><font size=2.5 color=#66666f>Help
+<line>
+<button>
+label=Infos & Contact
+icon=noicon
+arg=<macro>
+theUrl = "https://c4science.ch/w/bioimaging_and_optics_platform_biop/image-processing/imagej_tools/ijab-biop_channel_tools/";
+run("URL...", "url="+theUrl);
 </macro>
 </line>
