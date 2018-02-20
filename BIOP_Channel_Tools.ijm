@@ -334,7 +334,7 @@ function montageApply(){
 		
 		// Get the number of separate images we need to create
 		monImages = split(advMon, ", ");
-		finalImages = newArray(monImages.length);
+		finalImages = newArray(lengthOf(monImages));
 		c =  monImages.length-1;
 		for(i=0; i< monImages.length; i++) {
 			channels = split(monImages[i], "+");
