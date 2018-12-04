@@ -326,7 +326,7 @@ function montageApply(){
 	ori = getTitle();
 	if (advMon != "") {
 
-		Stack.setDisplayMode("composite");
+		run("Make Composite", "display=Composite");
 		run("Duplicate...", " duplicate channels");
 		name = getTitle();
 		run("Split Channels");
