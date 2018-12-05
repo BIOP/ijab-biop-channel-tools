@@ -34,7 +34,7 @@ function toolName() {
 
 
 function channelsLUTSelection(){
-
+	run("Make Composite", "display=Composite");
 	getDimensions(width, height, channels, slices, frames);
 	
 	defaultsArray = newArray("Red","Green","Blue","Grays","Cyan","Magenta","Yellow","Fire");
@@ -55,6 +55,7 @@ function channelsLUTSelection(){
 }
 
 function channelsLUTApply(){
+	run("Make Composite", "display=Composite");
 	getDimensions(width, height, channels, slices, frames);
 		
 	colorFirstChannel =  getData("color channel 1 using LUT");
