@@ -56,6 +56,7 @@ function channelsLUTSelection(){
 
 function channelsLUTApply(){
 	run("Make Composite", "display=Color");
+	Stack.setDisplayMode("color");
 	getDimensions(width, height, channels, slices, frames);
 		
 	colorFirstChannel =  getData("color channel 1 using LUT");
